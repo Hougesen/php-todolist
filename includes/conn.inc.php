@@ -1,5 +1,5 @@
 <?php
-$serverName = "172.18.0.3";
+$serverName = "docker_mysql_1";
 $dbUsername = "root";
 $dbPassword = "docker";
 $dbName = "todolist";

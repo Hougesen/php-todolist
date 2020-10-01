@@ -2,7 +2,6 @@
 require "./includes/conn.inc.php";
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@ require "./includes/conn.inc.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todolist</title>
     <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./scripts/app.js" defer></script>
+    <!--  <script src="./scripts/app.js" defer></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
@@ -25,14 +24,13 @@ require "./includes/conn.inc.php";
                 <input type="text" id="taskInput" name="taskInput" />
                 <button type="submit">New task</button>
             </form>
-            <form action="./includes/clearlist.inc.php"> <button>Clear list</button>
+            <!--  <form action="./includes/clearlist.inc.php"> <button>Clear list</button>-->
             </form>
-        </div>
-        <div>
-
-            <ul class="taskList">
+            <form action="./includes/delete.inc.php" method="POST">
+                <button type="submit">Delete done</button>
+                <br>
                 <?php require "./includes/select.inc.php"; ?>
-            </ul>
+            </form>
         </div>
     </div>
 </body>
