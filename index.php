@@ -21,15 +21,17 @@ require "./includes/conn.inc.php";
             <form action="./includes/insert.inc.php" method="POST">
                 <label for="taskInput">Add a new task:</label>
                 <br>
-                <input type="text" id="taskInput" name="taskInput" />
+                <input type="text" id="taskInput" name="taskInput">
                 <button type="submit">New task</button>
             </form>
             <!--  <form action="./includes/clearlist.inc.php"> <button>Clear list</button>-->
             </form>
             <form action="./includes/delete.inc.php" method="POST">
-                <button type="submit">Delete done</button>
+                <button type="submit" class="deleteDone">Delete done</button>
                 <br>
-                <?php require "./includes/select.inc.php"; ?>
+                <div class="tasks">
+                    <?php require "./includes/select.inc.php"; ?>
+                </div>
             </form>
         </div>
     </div>
